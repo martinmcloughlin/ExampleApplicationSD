@@ -5,5 +5,23 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_second">SecondActivity</string>
+    <string name="customNotificationBtnText">Send Custom Notification</string>
+    <string name="showIconText">Show Icon</string>
+    <string name="hideIconText">Hide Icon</string>
+    <string name="notificationTextHint">Notification Message</string>
+    <string name="notificationTitleHint">Notification Title</string>
+    <string name="customNotifyAreaTitle">Custom Notification</string>
+    <string name="BigNote2Btn">Big Notification With Action</string>
+    <string name="BigNote1Btn">Big View Notification</string>
+    <string name="SimpleNoteBtn">Simple Notification</string>
+    <string name="sampleNotifyText">Sample Notification</string>
+    <string name="sampleEventText">Text for the notification.</string>
+    <string name="sampleExtraString">This is an extra String!</string>
+    <string name="sampleExtraEventTExt">This is supposed to  be a content that will not fit the normal content screen</string>
+    <string name="sampleExtraEventText2"> usually a bigger text, by example a long text message or email.</string>
+    <string name="sampleBigTitle">Mr. Flowers</string>
+    <string name="sampleBigText">Check out this picture!! :D</string>
+    <string name="normal_notify">Normal Notification</string>
+    <string name="wear_notify">Wear Notification</string>
 
 </resources>

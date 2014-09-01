@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
+import static android.widget.RadioGroup.OnCheckedChangeListener;
+
 
 public class MasterPhoneActivity extends Activity {
 
@@ -35,7 +37,7 @@ public class MasterPhoneActivity extends Activity {
 
         // RadioGroup for the customIcon
         mCustomIconGroup = (RadioGroup) findViewById(R.id.iconGroup);
-        mCustomIconGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        mCustomIconGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             // The name of the ICONS will change based on how you named it....
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -55,7 +57,7 @@ public class MasterPhoneActivity extends Activity {
 
         // RadioGroup to determine if App Icons should be shown or not.
         showHideIconGroup = (RadioGroup) findViewById(R.id.hideIconGroup);
-        showHideIconGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        showHideIconGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (group.getCheckedRadioButtonId()) {
@@ -84,10 +86,7 @@ public class MasterPhoneActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
     }
 
     // Define the method to send the notifications with the same name from the Android onClick from the XML Layout
@@ -96,12 +95,12 @@ public class MasterPhoneActivity extends Activity {
 
         // Common elements for all our notifications
         int notificationId = 001; // id- An identifier for this notification unique within your application.
-        String eventTitle = "Sample Notification"; // Title for the notificaiton
-        String eventText = "Text for the notification."; // Text for the notificaiton
-        String intentExtra = "This is an extra String!"; // Extra String to be passed to a intent
+        String eventTitle = getString(R.string.sampleNotifyText); // Title for the notificaiton
+        String eventText = getString(R.string.sampleEventText); // Text for the notificaiton
+        String intentExtra = getString(R.string.sampleExtraString); // Extra String to be passed to a intent
         // A large String to be used by the BigStyle
-        String eventDescription = "This is supposed to  be a content that will not fit the normal content screen"
-                + " usually a bigger text, by example a long text message or email.";
+        String eventDescription = getString(R.string.sampleExtraEventTExt)
+                + getString(R.string.sampleExtraEventText2);
 
         // Build intent for notification content - This will take us to our MainActivity
         Intent viewIntent = new Intent(this, MasterPhoneActivity.class);
@@ -148,8 +147,8 @@ public class MasterPhoneActivity extends Activity {
                 photoIntent.putExtra("photo", R.drawable.ic_launcher); // Send the photo to the next activity
 
                 PendingIntent photoPending = PendingIntent.getActivity(this, 0, photoIntent, 0); // set a new pending intent
-                bigStyle.setBigContentTitle("Mr. Flowers"); // title for the Big Text
-                bigStyle.bigText("Check out this picture!! :D"); // Message in the Big Text
+                bigStyle.setBigContentTitle(getString(R.string.sampleBigTitle)); // title for the Big Text
+                bigStyle.bigText(getString(R.string.sampleBigText)); // Message in the Big Text
                 mBuilder = new NotificationCompat.Builder(this)
                         .setSmallIcon(R.drawable.ic_world_notify) // Small icon for our notification
                         .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher)) // The PNG picture
@@ -168,11 +167,12 @@ public class MasterPhoneActivity extends Activity {
                         .setContentText(mCustomMessage.getText().toString()) // We set the contentText to the message set by the user
                         .setContentIntent(viewPendingIntent); // set an intent to receive the Open action.
 
-                // This is an example of the NEW WearableNotification SDK.
-                // The WearableNotification has special functionality for wearable devices
-                // By example the setHintHideIcon hides the APP ICON from the notification.
                 mNotification = new NotificationCompat.Builder(this)
-                        //.setHintHideIcon(!showIcon) // This will determine if we should show or not the Icon of the app
+                        .setSmallIcon(mCustomIcon)
+                        .extend(new NotificationCompat.WearableExtender().setHintHideIcon(!showIcon))
+                        .setContentTitle(mCustomTitle.getText().toString())
+                        .setContentText(mCustomMessage.getText().toString())
+                        .setContentIntent(viewPendingIntent)
                         .build();
                 break;
         }
@@ -182,11 +182,11 @@ public class MasterPhoneActivity extends Activity {
         if(view.getId() != R.id.sendCustomNotification) {
             // Build the notification and issues it with notification manager.
             notificationManager.notify(notificationId, mBuilder.build());
-            Log.d(LOG_TAG, "Normal Notification");
+            Log.d(LOG_TAG, getString(R.string.normal_notify));
         } else {
             // Use the Wearable Notification Builder
             notificationManager.notify(notificationId, mNotification);
-            Log.d(LOG_TAG, "Wear Notification");
+            Log.d(LOG_TAG, getString(R.string.wear_notify));
         }
     }
 

@@ -12,7 +12,7 @@
     >
     <Button
         android:id="@+id/simpleNotification"
-        android:text="Simple Notification"
+        android:text="@string/SimpleNoteBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -20,7 +20,7 @@
         />
     <Button
         android:id="@+id/bigNotification"
-        android:text="Big View Notification"
+        android:text="@string/BigNote1Btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -28,14 +28,14 @@
         />
     <Button
         android:id="@+id/bigNotificationWithAction"
-        android:text="Big Notification With Action"
+        android:text="@string/BigNote2Btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:onClick="sendNotification"
         />
     <TextView
-        android:text="Custom Notification"
+        android:text="@string/customNotifyAreaTitle"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,14 +43,14 @@
         />
     <EditText
         android:id="@+id/notificationTitle"
-        android:hint="Notification Title"
+        android:hint="@string/notificationTitleHint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         />
     <EditText
         android:id="@+id/notificationMessage"
-        android:hint="Notification Message"
+        android:hint="@string/notificationTextHint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -92,14 +92,14 @@
         >
         <RadioButton
             android:id="@+id/hideIcon"
-            android:text="Hide Icon"
+            android:text="@string/hideIconText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             />
         <RadioButton
             android:id="@+id/showIcon"
-            android:text="Show Icon"
+            android:text="@string/showIconText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -107,7 +107,7 @@
     </RadioGroup>
     <Button
         android:id="@+id/sendCustomNotification"
-        android:text="Send Custom Notification"
+        android:text="@string/customNotificationBtnText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="sendNotification"
