@@ -171,7 +171,7 @@ public class MasterPhoneActivity extends Activity {
                 // This is an example of the NEW WearableNotification SDK.
                 // The WearableNotification has special functionality for wearable devices
                 // By example the setHintHideIcon hides the APP ICON from the notification.
-                mNotification = new Notification.Builder(this)
+                mNotification = new NotificationCompat.Builder(this)
                         //.setHintHideIcon(!showIcon) // This will determine if we should show or not the Icon of the app
                         .build();
                 break;
