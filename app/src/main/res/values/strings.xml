@@ -19,8 +19,10 @@
     <string name="sampleExtraString">This is an extra String!</string>
     <string name="sampleExtraEventTExt">This is supposed to  be a content that will not fit the normal content screen</string>
     <string name="sampleExtraEventText2"> usually a bigger text, by example a long text message or email.</string>
-    <string name="sampleBigTitle">Mr. Flowers</string>
-    <string name="sampleBigText">Check out this picture!! :D</string>
+    <string name="sampleBigTitle">Product Available</string>
+    <string name="sampleBigText">Swipe left for more information, or swipe right to dismiss</string>
+    <string name="sampleBigTitle2">Product Name</string>
+    <string name="sampleBigText2">Interested?</string>
     <string name="normal_notify">Normal Notification</string>
     <string name="wear_notify">Wear Notification</string>
     <string name="titleThirdScreen">Third Page</string>

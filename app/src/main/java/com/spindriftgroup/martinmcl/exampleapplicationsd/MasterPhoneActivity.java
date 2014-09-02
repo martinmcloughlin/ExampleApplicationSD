@@ -102,7 +102,7 @@ public class MasterPhoneActivity extends Activity {
                 + getString(R.string.sampleExtraEventText2);
 
         // Build intent for notification content - This will take us to our MainActivity
-        Intent viewIntent = new Intent(this, MasterPhoneActivity.class);
+        Intent viewIntent = new Intent(this, SecondActivity.class);
         PendingIntent viewPendingIntent = PendingIntent.getActivity(this, 0, viewIntent, 0);
 
         // Specify the 'big view' content to display the long
@@ -152,7 +152,7 @@ public class MasterPhoneActivity extends Activity {
                         .setSmallIcon(R.drawable.ic_world_notify) // Small icon for our notification
                         .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher)) // The PNG picture
                         .setContentIntent(viewPendingIntent) // This will be the default OPEN button.
-                        .addAction(R.drawable.ic_photo_view, "See Photo", photoPending) // This is our extra action. With an Extra Icon and pointing to the other PendingIntent
+                        //.addAction(R.drawable.ic_alert_rnd_notify, "View More?", photoPending) // This is our extra action. With an Extra Icon and pointing to the other PendingIntent
                         .setAutoCancel(true)
                         .setStyle(bigStyle); // Add the bigStyle
                 break;

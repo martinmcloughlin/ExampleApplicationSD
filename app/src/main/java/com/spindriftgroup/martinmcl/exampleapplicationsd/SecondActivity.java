@@ -124,13 +124,13 @@ public class SecondActivity extends Activity {
                 photoIntent2.putExtra("photo", R.drawable.ic_launcher); // Send the photo to the next activity
 
                 PendingIntent photoPending2 = PendingIntent.getActivity(this, 0, photoIntent2, 0); // set a new pending intent
-                bigStyle.setBigContentTitle(getString(R.string.sampleBigTitle)); // title for the Big Text
-                bigStyle.bigText(getString(R.string.sampleBigText)); // Message in the Big Text
+                bigStyle.setBigContentTitle(getString(R.string.sampleBigTitle2)); // title for the Big Text
+                bigStyle.bigText(getString(R.string.sampleBigText2)); // Message in the Big Text
                 mBuilder = new NotificationCompat.Builder(this)
                         .setSmallIcon(R.drawable.ic_mail_notify) // Small icon for our notification
                         .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher)) // The PNG picture
                         .setContentIntent(viewPendingIntent) // This will be the default OPEN button.
-                        .addAction(R.drawable.ic_mail_notify, "See Photo 2", photoPending2) // This is our extra action. With an Extra Icon and pointing to the other PendingIntent
+                        //.addAction(R.drawable.ic_mail_notify, "See screen 3", photoPending2) // This is our extra action. With an Extra Icon and pointing to the other PendingIntent
                         .setAutoCancel(true)
                         .setStyle(bigStyle); // Add the bigStyle
                 break;
