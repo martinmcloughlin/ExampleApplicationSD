@@ -63,24 +63,24 @@
         android:layout_marginBottom="@dimen/activity_vertical_margin">
         <RadioButton
             android:id="@+id/icon1"
-            android:drawableRight="@drawable/ic_mail_notify"
+            android:drawableEnd="@drawable/ic_mail_notify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
             />
         <RadioButton
             android:id="@+id/icon2"
-            android:drawableRight="@drawable/ic_alert_rnd_notify"
+            android:drawableEnd="@drawable/ic_alert_rnd_notify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
             />
         <RadioButton
             android:id="@+id/icon3"
-            android:drawableRight="@drawable/ic_world_notify"
+            android:drawableEnd="@drawable/ic_world_notify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
             />
     </RadioGroup>
     <RadioGroup
@@ -95,14 +95,14 @@
             android:text="@string/hideIconText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
             />
         <RadioButton
             android:id="@+id/showIcon"
             android:text="@string/showIconText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
             />
     </RadioGroup>
     <Button

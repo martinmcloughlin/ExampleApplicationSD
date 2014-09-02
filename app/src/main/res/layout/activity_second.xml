@@ -12,18 +12,19 @@
     android:textAlignment="center">
 
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/sampleBigTitle2"
         android:id="@+id/textView2"
         android:layout_marginBottom="10dp"
-        android:autoText="false" />
+        android:inputType="text" />
 
     <ImageView
+        android:contentDescription="@string/placeholderImageName"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:id="@+id/imageView2"
         android:src="@drawable/test_a" />
 

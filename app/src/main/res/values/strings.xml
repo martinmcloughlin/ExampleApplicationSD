@@ -29,5 +29,6 @@
     <string name="title_activity_second">SecondActivity</string>
     <!-- PAGE 3 -->
     <string name="titleThirdScreen">Third Page</string>
+    <string name="placeholderImageName">PlaceHolder</string>
 
 </resources>
