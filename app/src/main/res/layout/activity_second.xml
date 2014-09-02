@@ -1,100 +1,48 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:background="#34495e"
-    >
+    android:textAlignment="center">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/sampleBigTitle2"
+        android:id="@+id/textView2"
+        android:layout_marginBottom="10dp"
+        android:autoText="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/test" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/sampleExtraEventTExt"
+        android:id="@+id/textView3"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
 
     <Button
-        android:id="@+id/bigNotificationWithAction"
-        android:text="@string/BigNote2Btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:onClick="sendNotification"
-        />
-    <TextView
-        android:text="@string/customNotifyAreaTitle"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        />
-    <EditText
-        android:id="@+id/notificationTitle"
-        android:hint="@string/notificationTitleHint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        />
-    <EditText
-        android:id="@+id/notificationMessage"
-        android:hint="@string/notificationTextHint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        />
-    <RadioGroup
-        android:id="@+id/iconGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/activity_vertical_margin">
-        <RadioButton
-            android:id="@+id/icon1"
-            android:drawableRight="@drawable/ic_mail_notify"
-            android:layout_width="wrap_content"
+            android:id="@+id/bigNotificationWithAction"
+            android:text="@string/BigNote2Btn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            />
-        <RadioButton
-            android:id="@+id/icon2"
-            android:drawableRight="@drawable/ic_alert_rnd_notify"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            />
-        <RadioButton
-            android:id="@+id/icon3"
-            android:drawableRight="@drawable/ic_world_notify"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            />
-    </RadioGroup>
-    <RadioGroup
-        android:id="@+id/hideIconGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        >
-        <RadioButton
-            android:id="@+id/hideIcon"
-            android:text="@string/hideIconText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            />
-        <RadioButton
-            android:id="@+id/showIcon"
-            android:text="@string/showIconText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            />
-    </RadioGroup>
-    <Button
-        android:id="@+id/sendCustomNotification"
-        android:text="@string/customNotificationBtnText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="sendNotification"
-        />
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:onClick="sendNotification" />
+
+
 </LinearLayout>

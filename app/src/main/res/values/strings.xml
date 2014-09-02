@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!-- GENERAL -->
     <string name="app_name">Example Application SD</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_second">SecondActivity</string>
     <string name="customNotificationBtnText">Send Custom Notification</string>
     <string name="showIconText">Show Icon</string>
     <string name="hideIconText">Hide Icon</string>
@@ -14,6 +13,8 @@
     <string name="BigNote2Btn">Big Notification With Action</string>
     <string name="BigNote1Btn">Big View Notification</string>
     <string name="SimpleNoteBtn">Simple Notification</string>
+    <string name="normal_notify">Normal Notification</string>
+    <string name="wear_notify">Wear Notification</string>
     <string name="sampleNotifyText">Sample Notification</string>
     <string name="sampleEventText">Text for the notification.</string>
     <string name="sampleExtraString">This is an extra String!</string>
@@ -23,8 +24,10 @@
     <string name="sampleBigText">Swipe left for more information, or swipe right to dismiss</string>
     <string name="sampleBigTitle2">Product Name</string>
     <string name="sampleBigText2">Interested?</string>
-    <string name="normal_notify">Normal Notification</string>
-    <string name="wear_notify">Wear Notification</string>
+    <!-- PAGE 1 -->
+    <!-- PAGE 2 -->
+    <string name="title_activity_second">SecondActivity</string>
+    <!-- PAGE 3 -->
     <string name="titleThirdScreen">Third Page</string>
 
 </resources>
