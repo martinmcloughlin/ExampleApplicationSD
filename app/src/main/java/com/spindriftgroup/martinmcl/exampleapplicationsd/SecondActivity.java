@@ -69,7 +69,7 @@ public class SecondActivity extends Activity {
         bigStyle.bigText(getString(R.string.sampleBigText2)); // Message in the Big Text
         mBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.ic_mail_notify) // Small icon for our notification
-                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher)) // The PNG picture
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.test)) // The PNG picture
                 .setContentIntent(viewPendingIntent) // This will be the default OPEN button.
                 .setAutoCancel(true)
                 .setStyle(bigStyle); // Add the bigStyle
