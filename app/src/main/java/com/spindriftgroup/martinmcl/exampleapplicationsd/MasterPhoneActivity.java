@@ -90,13 +90,12 @@ public class MasterPhoneActivity extends Activity {
     }
 
     // Define the method to send the notifications with the same name from the Android onClick from the XML Layout
-    // Define the method to send the notifications with the same name from the Android onClick from the XML Layout
     public void sendNotification(View view) {
 
         // Common elements for all our notifications
         int notificationId = 001; // id- An identifier for this notification unique within your application.
-        String eventTitle = getString(R.string.sampleNotifyText); // Title for the notificaiton
-        String eventText = getString(R.string.sampleEventText); // Text for the notificaiton
+        String eventTitle = getString(R.string.sampleNotifyText); // Title for the notification
+        String eventText = getString(R.string.sampleEventText); // Text for the notification
         String intentExtra = getString(R.string.sampleExtraString); // Extra String to be passed to a intent
         // A large String to be used by the BigStyle
         String eventDescription = getString(R.string.sampleExtraEventTExt)

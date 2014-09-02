@@ -23,5 +23,6 @@
     <string name="sampleBigText">Check out this picture!! :D</string>
     <string name="normal_notify">Normal Notification</string>
     <string name="wear_notify">Wear Notification</string>
+    <string name="titleThirdScreen">Third Page</string>
 
 </resources>
