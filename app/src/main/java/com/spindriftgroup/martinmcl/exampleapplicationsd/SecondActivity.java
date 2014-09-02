@@ -63,13 +63,13 @@ public class SecondActivity extends Activity {
         // Create the new intent that is gonna receive the information from our action.
         Intent pageIntent2 = new Intent(this, ThirdActivity.class); // Intent pointing to our third activity
         pageIntent2.putExtra("message", intentExtra); // Set the extra message that will open in the next activity
-        pageIntent2.putExtra("photo", R.drawable.ic_launcher); // Send the photo to the next activity
+        pageIntent2.putExtra("photo", R.drawable.test_a); // Send the photo to the next activity
 
         bigStyle.setBigContentTitle(getString(R.string.sampleBigTitle2)); // title for the Big Text
         bigStyle.bigText(getString(R.string.sampleBigText2)); // Message in the Big Text
         mBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.ic_mail_notify) // Small icon for our notification
-                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.test)) // The PNG picture
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.test_a)) // The PNG picture
                 .setContentIntent(viewPendingIntent) // This will be the default OPEN button.
                 .setAutoCancel(true)
                 .setStyle(bigStyle); // Add the bigStyle
