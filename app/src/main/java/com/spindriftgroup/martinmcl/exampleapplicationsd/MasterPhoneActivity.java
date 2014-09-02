@@ -8,23 +8,21 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
+import static android.util.Log.d;
 import static android.widget.RadioGroup.OnCheckedChangeListener;
 
 
 public class MasterPhoneActivity extends Activity {
 
     private EditText mCustomTitle, mCustomMessage; // Edit text boxes for the custom notification
-    private RadioGroup mCustomIconGroup, showHideIconGroup; // Radiogroups with the Icon and settings for the custom notification
     private int mCustomIcon; // The variable that will hold the ID of the custom icon to show
     private boolean showIcon = false; // boolean that will tell if wear should show the app icon or not
-    private String LOG_TAG = "WEAR"; // Our LogCat tag for debugging purposes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +34,7 @@ public class MasterPhoneActivity extends Activity {
         mCustomMessage = (EditText) findViewById(R.id.notificationMessage);
 
         // RadioGroup for the customIcon
-        mCustomIconGroup = (RadioGroup) findViewById(R.id.iconGroup);
+        RadioGroup mCustomIconGroup = (RadioGroup) findViewById(R.id.iconGroup);
         mCustomIconGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             // The name of the ICONS will change based on how you named it....
             @Override
@@ -56,7 +54,7 @@ public class MasterPhoneActivity extends Activity {
         });
 
         // RadioGroup to determine if App Icons should be shown or not.
-        showHideIconGroup = (RadioGroup) findViewById(R.id.hideIconGroup);
+        RadioGroup showHideIconGroup = (RadioGroup) findViewById(R.id.hideIconGroup);
         showHideIconGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -93,7 +91,7 @@ public class MasterPhoneActivity extends Activity {
     public void sendNotification(View view) {
 
         // Common elements for all our notifications
-        int notificationId = 001; // id- An identifier for this notification unique within your application.
+        int notificationId = 1; // id- An identifier for this notification unique within your application.
         String eventTitle = getString(R.string.sampleNotifyText); // Title for the notification
         String eventText = getString(R.string.sampleEventText); // Text for the notification
         String intentExtra = getString(R.string.sampleExtraString); // Extra String to be passed to a intent
@@ -179,14 +177,16 @@ public class MasterPhoneActivity extends Activity {
 
         // This check will allow us to display the normal notification or the Wearable notification if the
         // notification is a CustomNotification
+        String LOG_TAG = "WEAR";
         if(view.getId() != R.id.sendCustomNotification) {
             // Build the notification and issues it with notification manager.
+            assert mBuilder != null;
             notificationManager.notify(notificationId, mBuilder.build());
-            Log.d(LOG_TAG, getString(R.string.normal_notify));
+            d(LOG_TAG, getString(R.string.normal_notify));
         } else {
             // Use the Wearable Notification Builder
             notificationManager.notify(notificationId, mNotification);
-            Log.d(LOG_TAG, getString(R.string.wear_notify));
+            d(LOG_TAG, getString(R.string.wear_notify));
         }
     }
 

@@ -14,8 +14,6 @@ import android.view.View;
 
 public class SecondActivity extends Activity {
 
-    private String LOG_TAG = "WEAR"; // Our LogCat tag for debugging purposes
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +42,7 @@ public class SecondActivity extends Activity {
     public void sendNotification(View view) {
 
         // Common elements for all our notifications
-        int notificationId = 002; // id- An identifier for this notification unique within your application.
+        int notificationId = 2; // id- An identifier for this notification unique within your application.
         String intentExtra = getString(R.string.sampleExtraString); // Extra String to be passed to a intent
 
 
@@ -55,7 +53,7 @@ public class SecondActivity extends Activity {
         // event description that may not fit the normal content text.
         NotificationCompat.BigTextStyle bigStyle = new NotificationCompat.BigTextStyle();
 
-        NotificationCompat.Builder mBuilder = null;
+        NotificationCompat.Builder mBuilder;
 
         // Get an instance of the NotificationManager service
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
@@ -75,6 +73,7 @@ public class SecondActivity extends Activity {
                 .setStyle(bigStyle); // Add the bigStyle
 
         notificationManager.notify(notificationId, mBuilder.build());
+        String LOG_TAG = "WEAR";
         Log.d(LOG_TAG, getString(R.string.normal_notify));
 
     }
