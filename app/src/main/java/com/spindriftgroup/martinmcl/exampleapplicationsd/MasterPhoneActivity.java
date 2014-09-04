@@ -96,7 +96,7 @@ public class MasterPhoneActivity extends Activity {
         String eventText = getString(R.string.sampleEventText); // Text for the notification
         String intentExtra = getString(R.string.sampleExtraString); // Extra String to be passed to a intent
         // A large String to be used by the BigStyle
-        String eventDescription = getString(R.string.sampleExtraEventTExt)
+        String eventDescription = getString(R.string.sampleExtraEventText)
                 + getString(R.string.sampleExtraEventText2);
 
         // Build intent for notification content - This will take us to our MainActivity
@@ -151,8 +151,8 @@ public class MasterPhoneActivity extends Activity {
                         .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher)) // The PNG picture
                         .setContentIntent(photoPending) // This will be the default OPEN button.
                         //.addAction(R.drawable.ic_alert_rnd_notify, "View More?", photoPending) // This is our extra action. With an Extra Icon and pointing to the other PendingIntent
-                        .setAutoCancel(true)
-                        .setStyle(bigStyle); // Add the bigStyle
+                        .setStyle(bigStyle) // Add the bigStyle
+                        .setAutoCancel(true);
                 break;
 
             case R.id.sendCustomNotification:

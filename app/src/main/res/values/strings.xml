@@ -18,7 +18,7 @@
     <string name="sampleNotifyText">Sample Notification</string>
     <string name="sampleEventText">Text for the notification.</string>
     <string name="sampleExtraString">This is an extra String!</string>
-    <string name="sampleExtraEventTExt">This is supposed to  be a content that will not fit the normal content screen</string>
+    <string name="sampleExtraEventText">This is supposed to  be a content that will not fit the normal content screen</string>
     <string name="sampleExtraEventText2"> usually a bigger text, by example a long text message or email.</string>
     <string name="sampleBigTitle">Product Available</string>
     <string name="sampleBigText">Swipe left for more information, or swipe right to dismiss</string>

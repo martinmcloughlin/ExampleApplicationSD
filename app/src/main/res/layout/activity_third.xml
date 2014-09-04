@@ -18,8 +18,8 @@
 
     <ImageView
         android:contentDescription="@string/placeholderImageName"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
         android:id="@+id/extraPhoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        android:src="@drawable/test_a" />
 </LinearLayout>
